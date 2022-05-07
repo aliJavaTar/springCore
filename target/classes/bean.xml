@@ -2,7 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean class="com.core.ali.Dog" name="dog">
-
+    <bean id="dog" class="com.core.ali.Dog" name="dog">
+        <property name="name" value="doberman"/>
     </bean>
+    <bean id="cat" class="com.core.ali.Cat" name="cat"/>
 </beans>

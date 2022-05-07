@@ -8,8 +8,16 @@ public class App {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("bean.xml");
 
-        Animal dog = (Animal) context.getBean("dog");
-        dog.move();
-
+        Animal animal = (Animal) context.getBean("dog");
+        animal.move();
+        Dog dog = context.getBean("dog", Dog.class);
+        System.out.println("first name " + dog.getName());
+        Dog dog1 = context.getBean("dog", Dog.class);
+        dog1.setName("jan");
+        System.out.println("-------------------");
+        System.out.println(dog.getName());
+        System.out.println(dog1.getName());
+        Cat cat = context.getBean("cat", Cat.class);
+        cat.move();
     }
 }
