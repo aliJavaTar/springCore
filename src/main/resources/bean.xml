@@ -6,4 +6,14 @@
         <property name="name" value="doberman"/>
     </bean>
     <bean id="cat" class="com.core.ali.Cat" name="cat"/>
+
+    <bean id="employee" class="com.core.Employee">
+        <property name="firstname" value="ali"/>
+        <property name="lastname" value="erfagh"/>
+        <constructor-arg ref="address"/>
+    </bean>
+    <bean id="address" class="com.core.Address">
+        <property name="zipCode" value="8585"/>
+        <property name="street" value="ta"/>
+    </bean>
 </beans>
